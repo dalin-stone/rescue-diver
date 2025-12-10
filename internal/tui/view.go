@@ -21,10 +21,10 @@ var (
 func (m Model) View() string {
 	title := titleStyle.Render("Rescue Diver 🤿")
 	body := fmt.Sprintf(
-		"Typed: %s\n\nPress 'q' or Ctrl+C to quit.",
+		"Typed: %s\n",
 		m.input,
 	)
-	status := components.StatusBar(" Press 'q' to quit")
+	status := components.StatusBar(" Press Ctrl+c to quit")
 
 	return lipgloss.JoinVertical(
 		lipgloss.Left,
